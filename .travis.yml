@@ -1,0 +1,13 @@
+install:
+- pip install --user awscli
+- sudo apt-get install hugo
+- hugo version
+before_script:
+- rm -rf public
+- hugo
+script:
+- aws s3 sync public/ s3://www.rippel.no --acl public-read --delete
+- aws cloudfront create-invalidation --distribution-id <DIST_ID> --path '/*'
+branches:
+  only:
+  - master

@@ -1,4 +1,4 @@
 theme = "zafta"
-baseURL = "http://example.org/"
+baseURL = "http://rippel.no"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Hugo Site"

@@ -8,7 +8,7 @@ before_script:
 - hugo
 script:
 - aws s3 sync public/ s3://www.orabra.no --acl public-read --delete
-- aws cloudfront create-invalidation --distribution-id E3L74387EAR98R --path '/*'
+- aws cloudfront create-invalidation --distribution-id E3V3SF90O7U0NT --path '/*'
 branches:
   only:
   - master
